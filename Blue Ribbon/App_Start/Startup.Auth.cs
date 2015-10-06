@@ -54,9 +54,9 @@ namespace Blue_Ribbon
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "479768162203886",
+               appSecret: "f5e1ec4cf661a2b57ebc991e27d94a02");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

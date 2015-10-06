@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Blue_Ribbon.Models
@@ -64,6 +65,12 @@ namespace Blue_Ribbon.Models
 
     public class RegisterViewModel
     {
+
+        [Required]
+        [Username]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -79,6 +86,19 @@ namespace Blue_Ribbon.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [AmazonProfileURL]
+        [Display(Name = "AmazonProfileURL")]
+        public string AmazonProfileURL { get; set; }
+    }
+
+    internal class AmazonProfileURLAttribute : Attribute
+    {
+    }
+
+    internal class UsernameAttribute : Attribute
+    {
     }
 
     public class ResetPasswordViewModel
